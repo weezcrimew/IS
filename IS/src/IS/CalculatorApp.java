@@ -47,7 +47,7 @@ class Calculator extends JFrame  {
 				
 				label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
 				label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
-				label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
+				label3 = new JLabel("Введите количество свободных руководителей с кафедры"); //dynamically allocates memory
 				label4 = new JLabel("Результат");
 				
 				textField1 = new JTextField("", 2); //dynamically allocates memory
@@ -99,7 +99,7 @@ class Calculator extends JFrame  {
 						
 						label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
 						label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
-						label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
+						label3 = new JLabel("Введите количество свободных руководителей с кафедры"); //dynamically allocates memory
 						label4 = new JLabel("Результат");
 						
 						textField1 = new JTextField("", 2); //dynamically allocates memory
