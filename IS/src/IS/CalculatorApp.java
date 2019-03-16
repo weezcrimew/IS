@@ -25,9 +25,9 @@ class Calculator extends JFrame  {
 		super("Calculator"); //set calculator's title
 		setBounds(370, 300, 250, 100); //set bounds.
 		
-		label1 = new JLabel("Âûáåðèòå ðîëü ïîëüçîâàòåëÿ");
-		bCathedra = new JButton("Çàâ. êàôåäðîé");
-		bDean = new JButton("Äåêàí");
+		label1 = new JLabel("Выберите роль пользователя");
+		bCathedra = new JButton("Зав. кафедрой");
+		bDean = new JButton("Декан");
 		
 		panel = new JPanel(new FlowLayout());  //dynamically allocates memory
 		panel.add(label1);
@@ -45,17 +45,17 @@ class Calculator extends JFrame  {
 				
 				setBounds(200, 300, 400, 150); //set bounds
 				
-				label1 = new JLabel("Ââåäèòå êîëè÷åñòâî ó÷åíèêîâ"); //dynamically allocates memory
-				label2 = new JLabel("Ââåäèòå êîëèåñòâî ó÷åíèêîâ íà ðóêîâîäèòåëÿ"); //dynamically allocates memory
-				label3 = new JLabel("Ââåäèòå ÷èñëî ñâîáîäíûõ ðóêîâîäèòåëåé ñ êàôåäðû"); //dynamically allocates memory
-				label4 = new JLabel("Ðåçóëüòàò");
+				label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
+				label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
+				label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
+				label4 = new JLabel("Результат");
 				
 				textField1 = new JTextField("", 2); //dynamically allocates memory
 				textField2 = new JTextField("", 2); //dynamically allocates memory
 				textField3 = new JTextField("", 2); //dynamically allocates memory
 				textField4 = new JTextField("", 2); //dynamically allocates memory
 				
-				bExecute = new JButton("Ïðîâåñòè ðàñ÷¸ò");
+				bExecute = new JButton("Провести расчёт");
 				
 				
 				panel.add(label1); //add the label on the panel
@@ -80,9 +80,9 @@ class Calculator extends JFrame  {
 				panel.revalidate();
 				setBounds(370, 300, 250, 120); //set bounds
 				
-				label1 = new JLabel("Ââåäèòå íàçâàíèå êàôåäðû"); //dynamically allocates memory
+				label1 = new JLabel("Введите название кафедры"); //dynamically allocates memory
 				textField1 = new JTextField("", 20); //dynamically allocates memory
-				bExecute = new JButton("Äàëåå");
+				bExecute = new JButton("Далее");
 				
 				panel.add(label1);
 				panel.add(textField1);
@@ -97,17 +97,17 @@ class Calculator extends JFrame  {
 						
 						setBounds(200, 300, 400, 150); //set bounds
 						
-						label1 = new JLabel("Ââåäèòå êîëè÷åñòâî ó÷åíèêîâ"); //dynamically allocates memory
-						label2 = new JLabel("Ââåäèòå êîëèåñòâî ó÷åíèêîâ íà ðóêîâîäèòåëÿ"); //dynamically allocates memory
-						label3 = new JLabel("Ââåäèòå ÷èñëî ñâîáîäíûõ ðóêîâîäèòåëåé ñ êàôåäðû"); //dynamically allocates memory
-						label4 = new JLabel("Ðåçóëüòàò");
+						label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
+						label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
+						label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
+						label4 = new JLabel("Результат");
 						
 						textField1 = new JTextField("", 2); //dynamically allocates memory
 						textField2 = new JTextField("", 2); //dynamically allocates memory
 						textField3 = new JTextField("", 2); //dynamically allocates memory
 						textField4 = new JTextField("", 2); //dynamically allocates memory
 						
-						bExecute = new JButton("Ïðîâåñòè ðàñ÷¸ò");
+						bExecute = new JButton("Провести расчёт");
 						
 						
 						panel.add(label1); //add the label on the panel
@@ -134,12 +134,12 @@ class Calculator extends JFrame  {
 		textField3 = new JTextField("", 2); //dynamically allocates memory
 		textField4 = new JTextField("", 2); //dynamically allocates memory
 		
-		label1 = new JLabel("Ââåäèòå êîëè÷åñòâî ó÷åíèêîâ"); //dynamically allocates memory
-		label2 = new JLabel("Ââåäèòå ÷èñëî ó÷åíèêîâ, êîòîðûõ êàæäûé ðóêîâîäèòåëü äîëæåí ïðèíÿòü"); //dynamically allocates memory
-		label3 = new JLabel("Ââåäèòå ÷èñëî ñâîáîäíûõ ðóêîâîäèòåëåé ñ êàôåäðû"); //dynamically allocates memory
-		label4 = new JLabel("Ðåçóëüòàò");
+		label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
+		label2 = new JLabel("Введите число учеников, которых каждый руководитель должен принять"); //dynamically allocates memory
+		label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
+		label4 = new JLabel("Результат");
 		
-		countB = new JButton("Ðàñ÷¸ò"); //dynamically allocates memory
+		countB = new JButton("Расчёт"); //dynamically allocates memory
 		
 		panel = new JPanel(new FlowLayout());  //dynamically allocates memory
 		
