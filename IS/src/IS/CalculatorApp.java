@@ -23,11 +23,11 @@ class Calculator extends JFrame  {
 	 
 	public Calculator() throws InterruptedException {
 		super("Calculator"); //set calculator's title
-		setBounds(370, 300, 250, 100); //set bounds
+		setBounds(370, 300, 250, 100); //set bounds.
 		
-		label1 = new JLabel("Выберите роль пользователя");
-		bCathedra = new JButton("Зав. кафедрой");
-		bDean = new JButton("Декан");
+		label1 = new JLabel("Г‚Г»ГЎГҐГ°ГЁГІГҐ Г°Г®Г«Гј ГЇГ®Г«ГјГ§Г®ГўГ ГІГҐГ«Гї");
+		bCathedra = new JButton("Г‡Г Гў. ГЄГ ГґГҐГ¤Г°Г®Г©");
+		bDean = new JButton("Г„ГҐГЄГ Г­");
 		
 		panel = new JPanel(new FlowLayout());  //dynamically allocates memory
 		panel.add(label1);
@@ -45,17 +45,17 @@ class Calculator extends JFrame  {
 				
 				setBounds(200, 300, 400, 150); //set bounds
 				
-				label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
-				label2 = new JLabel("Введите колиество учеников на руководителя"); //dynamically allocates memory
-				label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
-				label4 = new JLabel("Результат");
+				label1 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГіГ·ГҐГ­ГЁГЄГ®Гў"); //dynamically allocates memory
+				label2 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГҐГ±ГІГўГ® ГіГ·ГҐГ­ГЁГЄГ®Гў Г­Г  Г°ГіГЄГ®ГўГ®Г¤ГЁГІГҐГ«Гї"); //dynamically allocates memory
+				label3 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Г±ГўГ®ГЎГ®Г¤Г­Г»Гµ Г°ГіГЄГ®ГўГ®Г¤ГЁГІГҐГ«ГҐГ© Г± ГЄГ ГґГҐГ¤Г°Г»"); //dynamically allocates memory
+				label4 = new JLabel("ГђГҐГ§ГіГ«ГјГІГ ГІ");
 				
 				textField1 = new JTextField("", 2); //dynamically allocates memory
 				textField2 = new JTextField("", 2); //dynamically allocates memory
 				textField3 = new JTextField("", 2); //dynamically allocates memory
 				textField4 = new JTextField("", 2); //dynamically allocates memory
 				
-				bExecute = new JButton("Провести расчёт");
+				bExecute = new JButton("ГЏГ°Г®ГўГҐГ±ГІГЁ Г°Г Г±Г·ВёГІ");
 				
 				
 				panel.add(label1); //add the label on the panel
@@ -80,9 +80,9 @@ class Calculator extends JFrame  {
 				panel.revalidate();
 				setBounds(370, 300, 250, 120); //set bounds
 				
-				label1 = new JLabel("Введите название кафедры"); //dynamically allocates memory
+				label1 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ ГЄГ ГґГҐГ¤Г°Г»"); //dynamically allocates memory
 				textField1 = new JTextField("", 20); //dynamically allocates memory
-				bExecute = new JButton("Далее");
+				bExecute = new JButton("Г„Г Г«ГҐГҐ");
 				
 				panel.add(label1);
 				panel.add(textField1);
@@ -97,17 +97,17 @@ class Calculator extends JFrame  {
 						
 						setBounds(200, 300, 400, 150); //set bounds
 						
-						label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
-						label2 = new JLabel("Введите колиество учеников на руководителя"); //dynamically allocates memory
-						label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
-						label4 = new JLabel("Результат");
+						label1 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГіГ·ГҐГ­ГЁГЄГ®Гў"); //dynamically allocates memory
+						label2 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГҐГ±ГІГўГ® ГіГ·ГҐГ­ГЁГЄГ®Гў Г­Г  Г°ГіГЄГ®ГўГ®Г¤ГЁГІГҐГ«Гї"); //dynamically allocates memory
+						label3 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Г±ГўГ®ГЎГ®Г¤Г­Г»Гµ Г°ГіГЄГ®ГўГ®Г¤ГЁГІГҐГ«ГҐГ© Г± ГЄГ ГґГҐГ¤Г°Г»"); //dynamically allocates memory
+						label4 = new JLabel("ГђГҐГ§ГіГ«ГјГІГ ГІ");
 						
 						textField1 = new JTextField("", 2); //dynamically allocates memory
 						textField2 = new JTextField("", 2); //dynamically allocates memory
 						textField3 = new JTextField("", 2); //dynamically allocates memory
 						textField4 = new JTextField("", 2); //dynamically allocates memory
 						
-						bExecute = new JButton("Провести расчёт");
+						bExecute = new JButton("ГЏГ°Г®ГўГҐГ±ГІГЁ Г°Г Г±Г·ВёГІ");
 						
 						
 						panel.add(label1); //add the label on the panel
@@ -134,12 +134,12 @@ class Calculator extends JFrame  {
 		textField3 = new JTextField("", 2); //dynamically allocates memory
 		textField4 = new JTextField("", 2); //dynamically allocates memory
 		
-		label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
-		label2 = new JLabel("Введите число учеников, которых каждый руководитель должен принять"); //dynamically allocates memory
-		label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
-		label4 = new JLabel("Результат");
+		label1 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГіГ·ГҐГ­ГЁГЄГ®Гў"); //dynamically allocates memory
+		label2 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® ГіГ·ГҐГ­ГЁГЄГ®Гў, ГЄГ®ГІГ®Г°Г»Гµ ГЄГ Г¦Г¤Г»Г© Г°ГіГЄГ®ГўГ®Г¤ГЁГІГҐГ«Гј Г¤Г®Г«Г¦ГҐГ­ ГЇГ°ГЁГ­ГїГІГј"); //dynamically allocates memory
+		label3 = new JLabel("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Г±ГўГ®ГЎГ®Г¤Г­Г»Гµ Г°ГіГЄГ®ГўГ®Г¤ГЁГІГҐГ«ГҐГ© Г± ГЄГ ГґГҐГ¤Г°Г»"); //dynamically allocates memory
+		label4 = new JLabel("ГђГҐГ§ГіГ«ГјГІГ ГІ");
 		
-		countB = new JButton("Расчёт"); //dynamically allocates memory
+		countB = new JButton("ГђГ Г±Г·ВёГІ"); //dynamically allocates memory
 		
 		panel = new JPanel(new FlowLayout());  //dynamically allocates memory
 		
