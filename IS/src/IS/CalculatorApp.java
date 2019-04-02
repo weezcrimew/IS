@@ -23,7 +23,7 @@ class Calculator extends JFrame  {
 	 
 	public Calculator() throws InterruptedException {
 		super("Calculator"); //set calculator's title
-		setBounds(370, 300, 250, 100); //set bounds.
+		setBounds(370, 300, 250, 100); //set bounds
 		
 		label1 = new JLabel("Выберите роль пользователя");
 		bCathedra = new JButton("Зав. кафедрой");
@@ -43,7 +43,7 @@ class Calculator extends JFrame  {
 				panel.removeAll();
 				
 				
-				setBounds(200, 300, 400, 150); //set bounds
+				setBounds(630, 390, 630, 200); //set bounds
 				
 				label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
 				label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
@@ -53,9 +53,18 @@ class Calculator extends JFrame  {
 				textField1 = new JTextField("", 2); //dynamically allocates memory
 				textField2 = new JTextField("", 2); //dynamically allocates memory
 				textField3 = new JTextField("", 2); //dynamically allocates memory
-				textField4 = new JTextField("", 2); //dynamically allocates memory
+				textField4 = new JTextField("", 55); //dynamically allocates memory
 				
 				bExecute = new JButton("Провести расчёт");
+				bExecute.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						doCount();
+						
+					}
+					
+				});
 				
 				
 				panel.add(label1); //add the label on the panel
@@ -78,7 +87,7 @@ class Calculator extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 				panel.removeAll();
 				panel.revalidate();
-				setBounds(370, 300, 250, 120); //set bounds
+				setBounds(630, 390, 250, 120); //set bounds
 				
 				label1 = new JLabel("Введите название кафедры"); //dynamically allocates memory
 				textField1 = new JTextField("", 20); //dynamically allocates memory
@@ -95,7 +104,7 @@ class Calculator extends JFrame  {
 						panel.removeAll();
 						
 						
-						setBounds(200, 300, 400, 150); //set bounds
+						setBounds(630, 390, 630, 200); //set bounds
 						
 						label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
 						label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
@@ -105,10 +114,18 @@ class Calculator extends JFrame  {
 						textField1 = new JTextField("", 2); //dynamically allocates memory
 						textField2 = new JTextField("", 2); //dynamically allocates memory
 						textField3 = new JTextField("", 2); //dynamically allocates memory
-						textField4 = new JTextField("", 2); //dynamically allocates memory
+						textField4 = new JTextField("", 55); //dynamically allocates memory
 						
 						bExecute = new JButton("Провести расчёт");
-						
+						bExecute.addActionListener(new ActionListener() {
+
+							@Override
+							public void actionPerformed(ActionEvent arg0) {
+								doCount();
+								
+							}
+							
+						});
 						
 						panel.add(label1); //add the label on the panel
 						panel.add(textField1); //add the text field on the panel
@@ -154,16 +171,52 @@ class Calculator extends JFrame  {
 		panel.add(countB); //add the button on the panel
 		countB.addActionListener(this); //add action listener to the button
 		add(panel); //add the panel on the frame
-
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit on close*/
 	}
 
-	/*public void actionPerformed(ActionEvent e) { //action on click to the button
-			doCount();
-	}
 	
 	public void doCount(){
-		textField4.setText(""); //do the count
-	}*/
+		int totalStudents = 0, studentsPerTeacher = 0, freeCathedraTeachers = 0;
+		int requiredTotalTeachers = 0, requiredCathedraTeachers = 0, requiredNonCathedraTeachers = 0;
+		
+		try {
+			totalStudents = Integer.parseInt(textField1.getText());
+			if(totalStudents < 0)
+				throw new Exception();
+			
+			studentsPerTeacher = Integer.parseInt(textField2.getText());
+			if(!(studentsPerTeacher >= 1 && studentsPerTeacher <= 5))
+				throw new Exception();
+			
+			freeCathedraTeachers = Integer.parseInt(textField3.getText());
+			if(freeCathedraTeachers < 0)
+				throw new Exception();
+		}
+		catch(Exception e) {
+			totalStudents = 0;
+			textField1.setText("");
+			
+			studentsPerTeacher = 0;
+			textField2.setText("");
+			
+			freeCathedraTeachers = 0;
+			textField3.setText("");
+			
+			textField4.setText("Ошибка ввода");
+			return;
+		}
+		
+		requiredTotalTeachers = totalStudents / studentsPerTeacher;
+		if(totalStudents % studentsPerTeacher != 0)
+			requiredTotalTeachers++;
+		
+		if(requiredTotalTeachers <= freeCathedraTeachers)
+			requiredCathedraTeachers = requiredTotalTeachers;
+		else {
+			requiredCathedraTeachers = freeCathedraTeachers;
+			requiredNonCathedraTeachers = requiredTotalTeachers - freeCathedraTeachers;
+		}
+		textField4.setText("Необходимы дипломные руководители в количестве " + requiredTotalTeachers + " чел.: " + requiredCathedraTeachers + " чел. с кафедры и " + requiredNonCathedraTeachers + " чел. не с кафедры."); //do the count
+	}
 	
 }
