@@ -7,8 +7,8 @@ import javax.swing.*;
 public class CalculatorApp {
 
 	public static void main(String[] args) throws InterruptedException {
-		Calculator calc = new Calculator(); //create calculator's instance
-		calc.setVisible(true); //set calculator visible
+		Calculator calc = new Calculator(); 
+		calc.setVisible(true); 
 
 	}
 
@@ -16,20 +16,20 @@ public class CalculatorApp {
 
 
 class Calculator extends JFrame  {
-	 JLabel label1, label2, label3, label4; //create labels
-	 JButton bDean, bCathedra, bExecute ; //create button
-	 JTextField textField1, textField2, textField3, textField4; //create text fields
-	 JPanel panel; //create panel
+	 JLabel label1, label2, label3, label4; 
+	 JButton bDean, bCathedra, bExecute ; 
+	 JTextField textField1, textField2, textField3, textField4; 
+	 JPanel panel; 
 	 
 	public Calculator() throws InterruptedException {
-		super("Calculator"); //set calculator's title
-		setBounds(370, 300, 250, 100); //set bounds
+		super("Calculator"); 
+		setBounds(370, 300, 250, 100); 
 		
 		label1 = new JLabel("Выберите роль пользователя");
 		bCathedra = new JButton("Зав. кафедрой");
 		bDean = new JButton("Декан");
 		
-		panel = new JPanel(new FlowLayout());  //dynamically allocates memory
+		panel = new JPanel(new FlowLayout());  
 		panel.add(label1);
 		panel.add(bCathedra);
 		panel.add(bDean);
@@ -43,17 +43,17 @@ class Calculator extends JFrame  {
 				panel.removeAll();
 				
 				
-				setBounds(630, 390, 630, 200); //set bounds
+				setBounds(630, 390, 630, 200); 
 				
-				label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
-				label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
-				label3 = new JLabel("Введите количество свободных руководителей с кафедры"); //dynamically allocates memory
+				label1 = new JLabel("Введите количество учеников"); 
+				label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); 
+				label3 = new JLabel("Введите количество свободных руководителей с кафедры"); 
 				label4 = new JLabel("Результат");
 				
-				textField1 = new JTextField("", 2); //dynamically allocates memory
-				textField2 = new JTextField("", 2); //dynamically allocates memory
-				textField3 = new JTextField("", 2); //dynamically allocates memory
-				textField4 = new JTextField("", 55); //dynamically allocates memory
+				textField1 = new JTextField("", 2); 
+				textField2 = new JTextField("", 2); 
+				textField3 = new JTextField("", 2); 
+				textField4 = new JTextField("", 55); 
 				
 				bExecute = new JButton("Провести расчёт");
 				bExecute.addActionListener(new ActionListener() {
@@ -67,14 +67,14 @@ class Calculator extends JFrame  {
 				});
 				
 				
-				panel.add(label1); //add the label on the panel
-				panel.add(textField1); //add the text field on the panel
-				panel.add(label2); //add label on the panel
-				panel.add(textField2); //add the text field on the panel
-				panel.add(label3); //add the label on the panel
-				panel.add(textField3); //add the text field on the panel
-				panel.add(label4); //add the label on the panel
-				panel.add(textField4); //add text field on the panel
+				panel.add(label1); 
+				panel.add(textField1); 
+				panel.add(label2); 
+				panel.add(textField2); 
+				panel.add(label3); 
+				panel.add(textField3); 
+				panel.add(label4); 
+				panel.add(textField4); 
 				panel.add(bExecute);
 				
 			}
@@ -87,10 +87,10 @@ class Calculator extends JFrame  {
 			public void actionPerformed(ActionEvent e) {
 				panel.removeAll();
 				panel.revalidate();
-				setBounds(630, 390, 250, 120); //set bounds
+				setBounds(630, 390, 250, 120); 
 				
-				label1 = new JLabel("Введите название кафедры"); //dynamically allocates memory
-				textField1 = new JTextField("", 20); //dynamically allocates memory
+				label1 = new JLabel("Введите название кафедры"); 
+				textField1 = new JTextField("", 20); 
 				bExecute = new JButton("Далее");
 				
 				panel.add(label1);
@@ -104,17 +104,17 @@ class Calculator extends JFrame  {
 						panel.removeAll();
 						
 						
-						setBounds(630, 390, 630, 200); //set bounds
+						setBounds(630, 390, 630, 200); 
 						
-						label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
-						label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); //dynamically allocates memory
-						label3 = new JLabel("Введите количество свободных руководителей с кафедры"); //dynamically allocates memory
+						label1 = new JLabel("Введите количество учеников"); 
+						label2 = new JLabel("Введите количество учеников на руководителя (от 1 до 5)"); 
+						label3 = new JLabel("Введите количество свободных руководителей с кафедры"); 
 						label4 = new JLabel("Результат");
 						
-						textField1 = new JTextField("", 2); //dynamically allocates memory
-						textField2 = new JTextField("", 2); //dynamically allocates memory
-						textField3 = new JTextField("", 2); //dynamically allocates memory
-						textField4 = new JTextField("", 55); //dynamically allocates memory
+						textField1 = new JTextField("", 2); 
+						textField2 = new JTextField("", 2); 
+						textField3 = new JTextField("", 2);
+						textField4 = new JTextField("", 55); 
 						
 						bExecute = new JButton("Провести расчёт");
 						bExecute.addActionListener(new ActionListener() {
@@ -127,14 +127,14 @@ class Calculator extends JFrame  {
 							
 						});
 						
-						panel.add(label1); //add the label on the panel
-						panel.add(textField1); //add the text field on the panel
-						panel.add(label2); //add label on the panel
-						panel.add(textField2); //add the text field on the panel
-						panel.add(label3); //add the label on the panel
-						panel.add(textField3); //add the text field on the panel
-						panel.add(label4); //add the label on the panel
-						panel.add(textField4); //add text field on the panel
+						panel.add(label1); 
+						panel.add(textField1); 
+						panel.add(label2); 
+						panel.add(textField2); 
+						panel.add(label3); 
+						panel.add(textField3); 
+						panel.add(label4);
+						panel.add(textField4); 
 						panel.add(bExecute);
 						
 					}
@@ -143,35 +143,6 @@ class Calculator extends JFrame  {
 			}
 			
 		});
-		
-		//setBounds(200, 300, 600, 150); //set bounds
-		
-		/*textField1 = new JTextField("", 2); //dynamically allocates memory
-		textField2 = new JTextField("", 2); //dynamically allocates memory
-		textField3 = new JTextField("", 2); //dynamically allocates memory
-		textField4 = new JTextField("", 2); //dynamically allocates memory
-		
-		label1 = new JLabel("Введите количество учеников"); //dynamically allocates memory
-		label2 = new JLabel("Введите число учеников, которых каждый руководитель должен принять"); //dynamically allocates memory
-		label3 = new JLabel("Введите число свободных руководителей с кафедры"); //dynamically allocates memory
-		label4 = new JLabel("Результат");
-		
-		countB = new JButton("Расчёт"); //dynamically allocates memory
-		
-		panel = new JPanel(new FlowLayout());  //dynamically allocates memory
-		
-		panel.add(label1); //add the label on the panel
-		panel.add(textField1); //add the text field on the panel
-		panel.add(label2); //add label on the panel
-		panel.add(textField2); //add the text field on the panel
-		panel.add(label3); //add the label on the panel
-		panel.add(textField3); //add the text field on the panel
-		panel.add(label4); //add the label on the panel
-		panel.add(textField4); //add text field on the panel
-		panel.add(countB); //add the button on the panel
-		countB.addActionListener(this); //add action listener to the button
-		add(panel); //add the panel on the frame
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //exit on close*/
 	}
 
 	
@@ -216,7 +187,7 @@ class Calculator extends JFrame  {
 			requiredCathedraTeachers = freeCathedraTeachers;
 			requiredNonCathedraTeachers = requiredTotalTeachers - freeCathedraTeachers;
 		}
-		textField4.setText("Необходимы дипломные руководители в количестве " + requiredTotalTeachers + " чел.: " + requiredCathedraTeachers + " чел. с кафедры и " + requiredNonCathedraTeachers + " чел. не с кафедры."); //do the count
+		textField4.setText("Необходимы дипломные руководители в количестве " + requiredTotalTeachers + " чел.: " + requiredCathedraTeachers + " чел. с кафедры и " + requiredNonCathedraTeachers + " чел. не с кафедры."); 
 	}
 	
 }
