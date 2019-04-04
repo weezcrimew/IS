@@ -1,6 +1,7 @@
 package IS;
 
 import java.awt.*; // импорт пакета
+import java.awt.event.*; //импорт пакета
 public class CalculatorApp {
 
 	public static void main(String[] args) throws InterruptedException {
