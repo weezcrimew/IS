@@ -1,9 +1,5 @@
 package IS;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
 public class CalculatorApp {
 
 	public static void main(String[] args) throws InterruptedException {
